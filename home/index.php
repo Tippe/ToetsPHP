@@ -3,7 +3,7 @@
 ?>
 	<h1>Schoenmaker Tony</h1>
 	<ul>
-		<li><a href="../schoenmerk/index.php">Schoenmerken</a></li>
+		<li><a href="../schoenmerk/index.php">Brands</a></li>
 	</ul>
 	
 <?php

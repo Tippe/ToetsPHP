@@ -2,30 +2,36 @@
 	require_once "index.logic.php";
 	include "../common/header.php";
 ?>
-	<h1>Schoenmerken</h1>
+	<h1>Brands</h1>
 	<p class="options"><a href="create.php">create</a></p>
 	<table>
 		<thead>
 			<tr>
-                <th>Merk</th>
-                <!--<th>Maat</th>-->
+                <th>Brands</th>
+                <th>Size</th>
+                <th>Amount</th>
 				<th>Edit</th>
 				<th>Delete</th>
 			</tr>
 		</thead>
 		</tbody>
+		
+		
 <?php
-	foreach($schoenmerken as $schoenmerk):
+	foreach($brands as $brand) {
+        foreach($stockpiles as $stockpile) {
 ?>
 			<tr>
-				<td><?=$schoenmerk['merk']?></td>
-				<!--<td><?=$schoenmerk['id_schoenmaat']?></td> -->
-				<td class="center"><a href="edit.php?id=<?=$schoenmerk['id']?>">edit</a></td>
-				<td class="center"><a href="delete.php?id=<?=$schoenmerk['id']?>">delete</a></td>
+                <td><?=$brand['name']?></td>
+                <td><?=$stockpile['size']?></td>
+                <td><?=$stockpile['amount']?></td>
+				<td class="center"><a href="edit.php?id=<?=$brand['id']?>">edit</a></td>
+				<td class="center"><a href="delete.php?id=<?=$brand['id']?>">delete</a></td>
 			</tr>
 
 <?php
-	endforeach;
+        }
+    }
 ?>
 		</tbody>
 	</table>

@@ -2,16 +2,25 @@
 	require_once "create.logic.php";
 	include "../common/header.php";
 ?>
-	<h1>Nieuw Schoenmerk</h1>
+	<h1>New Brand</h1>
 	<form method="post">
 		<div>
-			<label for="name">Merk:</label>
-			<input type="text" id="merk" name="merk">
+			<label for="name">Brand:</label>
+			<input type="text" id="name" name="name">
+		</div>
+		<!--<div>
+			<label for="name">id_brand:</label>
+			<input type="text" id="id_brand" name="id_brand">
+		</div>-->
+		<div>
+			<label for="name">Size:</label>
+			<input type="text" id="size" name="size">
 		</div>
 		<div>
-			<label for="name">Maat:</label>
-			<input type="text" id="maat" name="maat">
+			<label for="name">Amount:</label>
+			<input type="text" id="amount" name="amount">
 		</div>
+		
 		<div>
 			<label></label>
 			<input type="submit" value="Save">
